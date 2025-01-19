@@ -26,5 +26,6 @@
         </config-file>
         <source-file src="src/ios/NfcPlugin.swift" />
         <preference name="SwiftVersion" value="5.0" />
+        <variable name="SWIFTVERSION" value="5.0" />
     </platform>
 </plugin>
