@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="il.co.simplevision.nfc-plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>NFC Plugin</name>
+    <description>Cordova plugin to read/write NFC tags</description>
+    <license>MIT</license>
+    <keywords>cordova, nfc</keywords>
+    
+    <js-module src="www/nfc.js" name="NFC">
+        <clobbers target="window.NFC"/>
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.NFC"/>
+            <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+        </config-file>
+        <source-file src="src/android/NfcPlugin.java" target-dir="src/com/simplevision/nfc"/>
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <framework src="CoreNFC.framework" weak="true"/>
+        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+            <string>App requires NFC access to read tags</string>
+        </config-file>
+        <source-file src="src/ios/NfcPlugin.swift" />
+    </platform>
+</plugin>
