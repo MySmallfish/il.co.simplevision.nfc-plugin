@@ -25,6 +25,7 @@
             <string>App requires NFC access to read tags</string>
         </config-file>
         <source-file src="src/ios/NfcPlugin.swift" />
+        <header-file src="src/ios/NfcPlugin-Bridging-Header.h" />
         <config-file target="config.xml" parent="/*">
             <preference name="deployment-target" value="13.0" />
             <preference name="SwiftVersion" value="5.0" />
