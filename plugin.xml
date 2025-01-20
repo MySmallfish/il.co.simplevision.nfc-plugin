@@ -27,7 +27,7 @@
         <source-file src="src/ios/NfcPlugin.swift" />
         <config-file target="config.xml" parent="/*">
             <preference name="deployment-target" value="13.0" />
-            <preference name="Swift-Version" value="5.0" />
+            <preference name="SwiftVersion" value="5.0" />
         </config-file>
         <pods-config ios-min-version="13.0" uses-frameworks="true"/>
     </platform>
