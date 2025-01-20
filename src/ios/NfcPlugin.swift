@@ -1,7 +1,6 @@
 import Foundation
 import CoreNFC
 import WebKit
-import Cordova
 
 @objc(NfcPlugin)
 class NfcPlugin: CDVPlugin, NFCNDEFReaderSessionDelegate {
