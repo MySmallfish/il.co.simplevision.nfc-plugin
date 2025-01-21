@@ -21,8 +21,11 @@
     <!-- iOS -->
     <platform name="ios">
         <framework src="CoreNFC.framework" weak="true"/>
-        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
-            <string>App requires NFC access to read tags</string>
+        <config-file parent="NFCReaderUsageDescription" target="*-Info.plist">
+            <string>This app requires NFC to read and interact with NFC tags</string>
+        </config-file>
+        <config-file parent="NSNFCReaderUsageDescription" target="*-Info.plist">
+            <string>This app requires NFC to read and interact with NFC tags</string>
         </config-file>
         <source-file src="src/ios/NfcPlugin.swift" />
         <header-file src="src/ios/NfcPlugin-Bridging-Header.h" />
